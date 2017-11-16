@@ -3,6 +3,8 @@ Ubuntu host running Docker CE, installed per https://docs.docker.com/engine/inst
 
 Installs Ubuntu, Docker CE and runs `docker run hello-world`.
 
+Supports Docker CE Stable, Edge and Test. Simply change the DOCKER_REPOS variable inside `install-docker.sh`.
+
 # Usage
 
 Simply clone this repo, and run `vagrant up`:
