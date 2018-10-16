@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-# Install Docker per https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/
+# Install Docker CE on Ubuntu per
+# https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/
 
-# Exit if any subcommand fails
-set -e
-set -x
+set -e # Exit if any subcommand fails
+set -x # Print commands for troubleshooting
 
 # 1. Update the apt package index:
 
