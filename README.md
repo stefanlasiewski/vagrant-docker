@@ -1,10 +1,13 @@
 # vagrant-ubuntu-docker
 
-Provides an Ubuntu host running Docker CE, installed per https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/
+Provides an Ubuntu host running Docker CE (Community Edition). Installs Docker following the
+official instructions at https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/
+as closely as practical.
 
 Installs Ubuntu, Docker CE and tests the finished image with `docker run hello-world`.
 
-Supports Docker CE Stable, Edge and Test. Simply change the DOCKER_REPOS variable inside `install-docker.sh`.
+Supports Docker CE Stable, Edge [Deprecated in July 2018](https://docs.docker.com/edge/)
+and Test. Simply change the `DOCKER_REPOS` variable inside `install-docker.sh`.
 
 # Usage
 
