@@ -47,4 +47,4 @@ sudo apt-get install --yes --quiet docker-ce
 
 # 4. Verify that Docker CE is installed correctly by running the hello-world image.
 
-sudo docker run hello-world
+sudo docker run --rm hello-world
