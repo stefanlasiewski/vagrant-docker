@@ -27,3 +27,13 @@ Bringing machine 'default' up with 'virtualbox' provider...
 ==> default: This message shows that your installation appears to be working correctly.
 ...
 ```
+
+## Specifying specific Docker versions
+
+To specify a specific version of Docker, pass an argument to the script in the
+Vagrantfile like this:
+
+```
+config.vm.box = "ubuntu/xenial64"
+config.vm.provision :shell, path: "install-docker.sh", args: "17.03.3~ce-0~ubuntu-xenial"
+```

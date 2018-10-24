@@ -6,6 +6,11 @@
 set -e # Exit if any subcommand fails
 set -x # Print commands for troubleshooting
 
+# The Docker version may be specified as $1
+if [ $# -eq 1 ]; then
+  docker_version=$1
+fi
+
 # 1. Update the apt package index:
 
 sudo apt-get --yes --quiet update
@@ -42,8 +47,11 @@ sudo add-apt-repository \
 sudo apt-get --yes --quiet update
 
 # 2. Install the latest version of Docker CE, or go to the next step to install a specific version. Any existing installation of Docker is replaced.
-
-sudo apt-get install --yes --quiet docker-ce
+if [ "$docker_version" ]; then
+  sudo apt-get install --yes --quiet docker-ce=$docker_version
+else
+  sudo apt-get install --yes --quiet docker-ce
+fi
 
 # 4. Verify that Docker CE is installed correctly by running the hello-world image.
 
